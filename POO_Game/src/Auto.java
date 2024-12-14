@@ -1,38 +1,5 @@
 public class Auto {
-    private String sPlaca;
-    private  double dVelocidadMaxima = 180;
-    private boolean bEncendidoMotor = false;
-    private boolean bMovimiento = false;
-    private boolean bLucesEncendidas = false;
-    private double dDistanciaFrenado = 8;
-    private double dVelocidadActual = 0;
-    private double dAceleracion = 15;
-    private double dTemperatura;
 
-    public Auto(String sPlaca) {
-        this.sPlaca = sPlaca;
-    }
-
-    public void encenderMotor(){
-        System.out.println("Motor Encendido");
-       bEncendidoMotor = true;
-    }
-    public void apagarMotor(){
-        System.out.println("Motor Apagado");
-        bEncendidoMotor = false;
-    }
-    public void avanzar(){
-        System.out.println("Acelerando ...");
-        //Falta considerar cuando se llega al limite: dVelocidadMaxima
-        if(bEncendidoMotor) {
-            dVelocidadActual = dVelocidadActual + dAceleracion;
-        }
-
-        System.out.println("Avance - Velocidad = " + dVelocidadActual);
-    }
-    public void frenar(){
-        System.out.println("Frenando ...");
-        if(bEncendidoMotor) {
             if(dVelocidadActual >= dDistanciaFrenado) {
                 dVelocidadActual = dVelocidadActual - dDistanciaFrenado;
             }else{

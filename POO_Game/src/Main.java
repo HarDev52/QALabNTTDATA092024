@@ -20,6 +20,7 @@ public class Main {
 
         System.out.println("Velocidad Máxima: " + nis.getdVelocidadMaxima());
 
+        System.out.println(config[XTEST][CAMB]);
 /*
         Auto auto1 = new Auto();
 
